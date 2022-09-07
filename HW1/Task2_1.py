@@ -5,7 +5,7 @@ x = int(input('Введите X: ')) != 0
 y = int(input('Введите Y: ')) != 0
 z = int(input('Введите Z: ')) != 0
 
-if ((x or y or z) == False) == (x == False) == 1 and ((x == False) and (y == False) and (z == False)) == 0:
+if ((x or y or z) == False) == 1 and ((x == False) and (y == False) and (z == False)) == 0:
     answer = False
 else:
     answer = True
