@@ -5,5 +5,9 @@ x = int(input('Введите X: ')) != 0
 y = int(input('Введите Y: ')) != 0
 z = int(input('Введите Z: ')) != 0
 
-answer = ((x or y or z) == False) == (x == False) and (y == False) and (z == False)
-print('¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z  is ', answer)
+if ((x or y or z) == False) == (x == False) == 1 and ((x == False) and (y == False) and (z == False)) == 0:
+    answer = False
+else:
+    answer = True
+
+print('¬(X ⋁ Y ⋁ Z) -> ¬X ⋀ ¬Y ⋀ ¬Z  is ', answer)
