@@ -38,9 +38,6 @@ def razbit(st):
 mn1_lis = razbit(mn1)
 mn2_lis = razbit(mn2)
 
-print (mn1_lis)
-print (mn2_lis)
-
 res = [mn1_lis[0]]
 
 ind1 = 1
