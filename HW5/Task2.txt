@@ -1,0 +1,23 @@
+There is a 2021 candy on the table. Two players are playing making a move after each other.
+The first move is determined by drawing lots. In one move, you can pick up no more than 28 candies.
+All the opponents candies go to the one who made the last move.
+
+NOTE: If a player tries to take more than 28 candies, it is regarded as cheating and the player automatically loses!
+
+Choose who you want to play with (1 - a person, 2 - a bot, 3 - a smart bot): 3
+Your name: Di
+The order of the move is determined randomly.
+The first one will be Di.
+Candies left 100
+Di takes candies: 13
+Candies left 87
+Smart Bot takes candies 11
+Candies left 76
+Di takes candies: 24
+Candies left 52
+Smart Bot takes candies 23
+Candies left 29
+Di takes candies: 7
+Candies left 22
+Smart Bot takes candies 22
+The winner is Smart Bot

@@ -1,0 +1,8 @@
+Now is O turn.
+ O | X | O 
+___|___|___
+ X | O | - 
+___|___|___
+ X | X | O 
+The winner is O
+Congratulations!!!
