@@ -1,0 +1,1 @@
+{"1": [{"FIO": "Anton Frolov", "NUMBER": "234-45-38", "DESCRIPTION": "Work"}], "2": [{"FIO": "Inna Koroleva", "NUMBER": "453-08-84", "DESCRIPTION": "Home"}], "3": [{"FIO": "Marat Shivtsov", "NUMBER": "729-87-83", "DESCRIPTION": "Personal"}]}
