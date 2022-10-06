@@ -1,8 +1,13 @@
 from telegram import Update, Bot
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 from bot_commands import *
+from bot_commands_XO import *
+from bot_commands_telDirectory import *
+from bot_commands_calcul import *
+from bot_commands_candy import *
+from bot_commands_21score import *
 
-bot_token="token"
+bot_token= "token_token"
 bot = Bot(bot_token)
 
 updater = Updater(bot_token, use_context=True)
@@ -72,30 +77,31 @@ x_o_handler = ConversationHandler(entry_points=[x_o_game_handler],
 
 dispatcher.add_handler(x_o_handler)
 
+score21_handler = CommandHandler('score21', score21)
+choice21_handler = MessageHandler(Filters.text, choice21)
+get21_handler = MessageHandler(Filters.text, get21)
+count21_handler = MessageHandler(Filters.text, count21)
+
+score21_game_handler = ConversationHandler(entry_points=[score21_handler],
+                                    states={O: [choice21_handler],
+                                            P: [get21_handler],
+                                            Q: [count21_handler]},
+                                    fallbacks=[cancel_handler])
+
+dispatcher.add_handler(score21_game_handler)
+
+
 
 
 wiki_handler = CommandHandler('wiki', wiki)
 dispatcher.add_handler(wiki_handler)
+dispatcher.add_handler(CommandHandler('my_score', my_score))
+dispatcher.add_handler(CommandHandler('spy_load', spy_load))
 dispatcher.add_handler(MessageHandler(Filters.voice, voice))
 dispatcher.add_handler(MessageHandler(Filters.command, unknown_command))
+dispatcher.add_handler(MessageHandler(Filters.text, unknown_text))
 
 
 updater.start_polling()
 updater.idle() # ctrl + c + c
-
-
-
-# import wikipedia
-# wikipedia.set_lang('ru')
-
-# def wiki(update, context):
-#     text = ' '.join(context.args)
-#     try:
-#         result = wikipedia.summary(text, sentences=2)
-#         context.bot.send_message(update.effective_chat.id, result)
-#     except:
-#         context.bot.send_message(update.effective_chat.id, 'Не найдено!')
-
-# wiki_handler = CommandHandler('wiki', wiki)
-# dispatcher.add_handler(wiki_handler)
 
